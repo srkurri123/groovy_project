@@ -2,9 +2,6 @@
 /* i am writng to test my skills */
 pipeline {
     agent any
-     triggers {
-        githubPush()
-     }
 
     stages {
         stage('Build') {
