@@ -1,27 +1,14 @@
-//  Jenkinsfile 
-/* i am writng to test my skills */
+@Library('my-shared-lib') _
+
 pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Test Shared Lib') {
             steps {
-                echo 'Building...'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing...'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying...'
-            }
-        }
-        stage('Cleanup') {
-            steps {
-                echo 'Cleaning up...'
+                script {
+                    sayHello("Srikanth")
+                }
             }
         }
     }
