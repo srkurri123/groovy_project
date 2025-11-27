@@ -7,7 +7,9 @@ pipeline {
         stage('Test Shared Lib') {
             steps {
                 script {
-                    sayhello("Srikanth")
+                    sayHello("Srikanth")
+                    buildApp()
+                    deployApp("dev")
                 }
             }
         }
